@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.fg.collectword.menu.MainScreenFragment"
+        android:label="MainScreenFragment" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_multiplayerFragment"
+            app:destination="@id/multiplayerFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_soloGameMenuFragment"
+            app:destination="@id/soloGameMenuFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_ratingFragment"
+            app:destination="@id/ratingFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.fg.collectword.game.GameFragment"
+        android:label="GameFragment" />
+    <fragment
+        android:id="@+id/matchMakingFragment"
+        android:name="com.fg.collectword.menu.MatchMakingFragment"
+        android:label="MatchMakingFragment" >
+        <action
+            android:id="@+id/action_matchMakingFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inviteCodeFragment"
+        android:name="com.fg.collectword.menu.InviteCodeFragment"
+        android:label="InviteCodeFragment" >
+        <action
+            android:id="@+id/action_inviteCodeFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soloGameMenuFragment"
+        android:name="com.fg.collectword.menu.SoloGameMenuFragment"
+        android:label="SoloGameMenuFragment" />
+    <fragment
+        android:id="@+id/multiplayerFragment"
+        android:name="com.fg.collectword.menu.MultiPlayerFragment"
+        android:label="MultiplayerFragment" >
+        <action
+            android:id="@+id/action_multiplayerFragment_to_inviteCodeFragment"
+            app:destination="@id/inviteCodeFragment" />
+        <action
+            android:id="@+id/action_multiplayerFragment_to_matchMakingFragment"
+            app:destination="@id/matchMakingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratingFragment"
+        android:name="com.fg.collectword.RatingFragment"
+        android:label="RatingFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.fg.collectword.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
