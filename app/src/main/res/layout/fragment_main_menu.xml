@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:ems="10"
-        android:enabled="false"
+        android:maxLength="26"
         android:hint="@string/start_game_choose_nickname"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
